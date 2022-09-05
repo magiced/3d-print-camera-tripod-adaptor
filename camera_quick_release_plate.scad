@@ -69,10 +69,12 @@ union()
 			}
 	
 }
+// hole
 translate([base_width/2, base_length/2, base_height+clamp_height+1])
 	{
 		hole();
 	}
-			translate([(base_width-clamp_width)/2 + wall_thickness,(base_length-clamp_length)/2 + wall_thickness, wall_thickness])
+
+#translate([(base_width-clamp_width)/2 + wall_thickness,(base_length-clamp_length)/2 + wall_thickness, base_height])
 	cube([clamp_width-2*wall_thickness,clamp_length-2*wall_thickness,base_height+clamp_height-wall_thickness+1]);
 }
